@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo — NoSleep Studio</title>
+    <link rel="icon" type="image/png" href="images/logos/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    keyframes: {
+                        fadeInDown: {
+                            '0%':   { opacity: '0', transform: 'translateY(-18px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInUp: {
+                            '0%':   { opacity: '0', transform: 'translateY(22px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInRight: {
+                            '0%':   { opacity: '0', transform: 'translateX(28px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        fadeIn: {
+                            '0%':   { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%':   { opacity: '0', transform: 'scale(0.96)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in-down':  'fadeInDown 1.4s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in-up':    'fadeInUp 1.3s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in-right': 'fadeInRight 1.6s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in':       'fadeIn 1.2s ease both',
+                        'scale-in':      'scaleIn 0.9s cubic-bezier(0.22,1,0.36,1) both',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="page-loader">
+        <img src="images/logos/favicon.png" alt="Cargando" class="loader-icon">
+        <span class="loader-text">Cargando</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header animate-fade-in-down">
+        <button class="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-left">
+            <a href="catalogo.html">Proyectos</a>
+            <a href="index.html#conocenos">Conócenos</a>
+        </nav>
+        
+        <a href="index.html" class="logo">
+            <img src="images/logos/logo.png" alt="NoSleep Studio">
+        </a>
+        
+        <div class="search-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 20L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Hero Catálogo -->
+    <section class="catalogo-hero">
+        <div class="catalogo-hero-content">
+            <h1 class="catalogo-title">Sit amet doler</h1>
+            <span class="catalogo-eyebrow">Lorem Lipsum</span>
+        </div>
+    </section>
+
+    <!-- Grid de Productos -->
+    <section class="catalogo-grid-section">
+        <div class="catalogo-grid">
+
+            <!-- Card 1: Heken -->
+            <article class="producto-card reveal reveal-up">
+                <div class="producto-carousel" data-carousel>
+                    <div class="producto-carousel-track">
+                        <div class="producto-slide">
+                            <img src="images/Productos/Heken/img1.png" alt="Heken - Vista 1">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/Heken/img2.png" alt="Heken - Vista 2">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/Heken/img3.png" alt="Heken - Vista 3">
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <button class="producto-arrow producto-arrow-prev" aria-label="Anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="producto-arrow producto-arrow-next" aria-label="Siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="producto-dots"></div>
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Heken</h3>
+                    <p class="producto-descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="producto-footer">
+                        <span class="producto-precio">$9,200 MXN</span>
+                        <a href="index.html#contacto" class="producto-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Terracota Heart -->
+            <article class="producto-card reveal reveal-up" style="transition-delay: 0.12s">
+                <div class="producto-carousel" data-carousel>
+                    <div class="producto-carousel-track">
+                        <div class="producto-slide">
+                            <img src="images/Productos/TerracotaHeart/img1.png" alt="Terracota Heart - Vista 1">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/TerracotaHeart/img2.png" alt="Terracota Heart - Vista 2">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/TerracotaHeart/img3.png" alt="Terracota Heart - Vista 3">
+                        </div>
+                    </div>
+                    <button class="producto-arrow producto-arrow-prev" aria-label="Anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="producto-arrow producto-arrow-next" aria-label="Siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="producto-dots"></div>
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Terracota Heart</h3>
+                    <p class="producto-descripcion">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                    <div class="producto-footer">
+                        <span class="producto-precio">$3,800 MXN</span>
+                        <a href="index.html#contacto" class="producto-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Producto placeholder -->
+            <article class="producto-card reveal reveal-up" style="transition-delay: 0.24s">
+                <div class="producto-carousel" data-carousel>
+                    <div class="producto-carousel-track">
+                        <div class="producto-slide">
+                            <img src="#" alt="Producto 3 - Vista 1">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="#" alt="Producto 3 - Vista 2">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="#" alt="Producto 3 - Vista 3">
+                        </div>
+                    </div>
+                    <button class="#" aria-label="Anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="#" aria-label="Siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="producto-dots"></div>
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Lorem Ipsum</h3>
+                    <p class="producto-descripcion">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.
+                    </p>
+                    <div class="producto-footer">
+                        <span class="producto-precio">$3,500 MXN</span>
+                        <a href="index.html#contacto" class="producto-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: Producto placeholder -->
+            <article class="producto-card reveal reveal-up" style="transition-delay: 0.36s">
+                <div class="producto-carousel" data-carousel>
+                    <div class="producto-carousel-track">
+                        <div class="producto-slide">
+                            <img src="#" alt="Producto 4 - Vista 1">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="#" alt="Producto 4 - Vista 2">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="#" alt="Producto 4 - Vista 3">
+                        </div>
+                    </div>
+                    <button class="producto-arrow producto-arrow-prev" aria-label="Anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="producto-arrow producto-arrow-next" aria-label="Siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="producto-dots"></div>
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Lorem Dolor</h3>
+                    <p class="producto-descripcion">
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                    </p>
+                    <div class="producto-footer">
+                        <span class="producto-precio">$9,200 MXN</span>
+                        <a href="index.html#contacto" class="producto-btn">Contáctanos</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer animate-fade-in" style="animation-delay:0.45s">
+        <div class="footer-left">
+            <a href="index.html#contacto">Contacto</a>
+        </div>
+        
+        <div class="footer-center">
+            <p>Guadalajara / Ags</p>
+        </div>
+        
+        <div class="footer-right">
+            <div class="footer-logo">
+                <img src="images/logos/icono.png" alt="NoSleep">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
