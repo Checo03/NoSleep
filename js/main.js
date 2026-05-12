@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ── Page Loader ─────────────────────────────────────────────
     const loader = document.getElementById('page-loader');
     if (loader) {
-        const MIN_DURATION = 1200;
+        const MIN_DURATION = 1050;
         const startTime = Date.now();
 
         function hideLoader() {
@@ -64,49 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ── Smooth scroll ───────────────────────────────────────────
     const navLinks = document.querySelectorAll('a[href^="#"]');
 
-    // ── Carrusel Proyectos ───────────────────────────────────
-    const track    = document.getElementById('carruselTrack');
-    const dots     = document.querySelectorAll('.dot');
-    const prevBtn  = document.getElementById('prevSlide');
-    const nextBtn  = document.getElementById('nextSlide');
-
-    if (track) {
-        const slides   = track.querySelectorAll('.carrusel-slide');
-        const total    = slides.length;
-        let current    = 0;
-        let autoTimer;
-
-        function goTo(index) {
-            current = (index + total) % total;
-            track.style.transform = `translateX(-${current * 100}%)`;
-            dots.forEach((d, i) => d.classList.toggle('active', i === current));
-        }
-
-        function startAuto() {
-            autoTimer = setInterval(() => goTo(current + 1), 4000);
-        }
-
-        function resetAuto() {
-            clearInterval(autoTimer);
-            startAuto();
-        }
-
-        prevBtn && prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-        nextBtn && nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => { goTo(+dot.dataset.index); resetAuto(); });
-        });
-
-        // Swipe en mobile
-        let touchStartX = 0;
-        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        track.addEventListener('touchend', e => {
-            const diff = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); resetAuto(); }
-        });
-
-        startAuto();
-    }
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
