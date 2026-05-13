@@ -179,6 +179,14 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+.nav-left a.active::after {
+    width: 100%;
+}
+
+.nav-left a.active {
+    opacity: 1;
+}
+
 .logo {
     position: absolute;
     left: 50%;
@@ -577,6 +585,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.92rem;
     font-weight: 400;
     color: var(--color-text);
+    text-decoration: none;
 }
 
 /* ===== Hamburger (oculto en desktop) ===== */
